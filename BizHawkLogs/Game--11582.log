@@ -1,0 +1,8 @@
+MainForm()
+Using DirectInput+XInput for host input (keyboard + gamepads)
+joy device: e6439ea0-a10e-11ef-8002-444553540000 `vJoy Device`
+Init method call rpc buffer unityhawk-callmethod-1133073896
+Init api call buffer unityhawk-apicall-1133073896
+Init input buffer unityhawk-key-input-1133073896
+ROM was not a multiple of 1024 bytes, and not a recognized header size: 80. Assume it's purely ROM data.
+Game was not in DB. CRC: DB065489 MD5: 93DF824E6F88FFC7A47FD28EB6C84DE7

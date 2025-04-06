@@ -1,0 +1,13 @@
+MainForm()
+Using DirectInput+XInput for host input (keyboard + gamepads)
+joy device: e6439ea0-a10e-11ef-8002-444553540000 `vJoy Device`
+joy device: 376ec8c0-0bec-11f0-8001-444553540000 `Generic   USB  Joystick  `
+joy device: 65fd49e0-c5a8-11ee-8001-444553540000 `Controller (XBOX 360 For Windows)`
+Init method call rpc buffer unityhawk-callmethod-981128255
+Init api call buffer unityhawk-apicall-981128255
+Init input buffer unityhawk-key-input-981128255
+ROM was not a multiple of 1024 bytes, and not a recognized header size: 80. Assume it's purely ROM data.
+Game was not in DB. CRC: DB065489 MD5: 93DF824E6F88FFC7A47FD28EB6C84DE7
+Init texture buffer unityhawk-texture-981128255-0
+Active Firmwares:
+  PSX+U : 0555C6FAE8906F3F09BAF5988F00E55F88E9F30B

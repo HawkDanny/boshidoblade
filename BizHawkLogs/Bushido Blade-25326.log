@@ -1,0 +1,8 @@
+MainForm()
+Using DirectInput+XInput for host input (keyboard + gamepads)
+joy device: e6439ea0-a10e-11ef-8002-444553540000 `vJoy Device`
+joy device: 16390d40-1304-11f0-8001-444553540000 `Controller (Afterglow Gamepad for Xbox 360)`
+joy device: 65fd49e0-c5a8-11ee-8001-444553540000 `Controller (XBOX 360 For Windows)`
+Init method call rpc buffer unityhawk-callmethod-1657802816
+Init api call buffer unityhawk-apicall-1657802816
+ROM was not a multiple of 1024 bytes, and not a recognized header size: 80. Assume it's purely ROM data.

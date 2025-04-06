@@ -72,3 +72,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+/Assets/Bushido Blade/Bushido Blade.bin
+/Assets/Bushido Blade/Bushido Blade.cue
+/Assets/PS1 bios.meta
+/Assets/Bushido Blade/Bushido Blade.bin.meta
+/Assets/Bushido Blade/Bushido Blade.cue.meta
+/Assets/PS1 bios
