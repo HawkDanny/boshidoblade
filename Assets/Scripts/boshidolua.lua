@@ -5,8 +5,16 @@ function main()
         -- print("running a frame");
         emu.yield() -- frameadvance() also works
 
-        print(memory.read_s8(0x0A11D4)); -- 0A11D4
-        local x = unityhawk.callmethod("IncrementBoshiScore", "" .. memory.read_s8(0x0A11D4));
+        local p1State = memory.read_s8(0x13D46C);
+        local p2State = memory.read_s8(0x13D794);
+
+        if p1State == 1 then
+            unityhawk.callmethod("IncrementBoshiScore", "" .. p1State);
+        end
+
+        if p2State == 1 then
+            unityhawk.callmethod("IncrementYellowYoshiScore", "" .. p2State);
+        end
     end
 end
 
