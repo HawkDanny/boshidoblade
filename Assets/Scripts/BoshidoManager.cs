@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityHawk;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
+using System.Runtime.CompilerServices;
 
 [ExecuteInEditMode]
 public class BoshidoManager : MonoBehaviour
@@ -13,6 +15,16 @@ public class BoshidoManager : MonoBehaviour
     [Header("Score UIs")]
     public TextMeshProUGUI boshiScoreUI;
     public TextMeshProUGUI yellowYoshiScoreUI;
+
+    [Header("Models")]
+    public Transform boshiModel;
+    public Transform yellowYoshiModel;
+    private Sequence currentSequence;
+
+    [Header("Streak Settings")]
+    public float animStartLength;
+    public float animSpeedupFactor;
+    private float currentAnimLength;
 
     //scores
     private int boshiScore;
@@ -38,10 +50,10 @@ public class BoshidoManager : MonoBehaviour
         {
             matchEnded = true;
 
-            if (boshiWins) ScoreBoshi();
-            if (yellowYoshiWins) ScoreYellowYoshi();
+            if (boshiWins) Score("boshi");
+            if (yellowYoshiWins) Score("yellow yoshi");
 
-            Invoke("Reload", 13);
+            Invoke("Reload", 14);
         }
     }
 
@@ -54,37 +66,84 @@ public class BoshidoManager : MonoBehaviour
         matchEnded = false;
     }
 
-    private void ScoreBoshi()
+    private void Score(string who)
     {
-        //reset streak
-        if (yellowYoshiScore > boshiScore)
+        Transform model = null;
+        TextMeshProUGUI scoreUI = null;
+        int score = 0;
+        int dir = 1;
+        if (who == "boshi")
+        {
+            model = boshiModel;
+            scoreUI = boshiScoreUI;
+
+            //if this score is coming from zero, they broke the other player's streak
+            if (boshiScore == 0) ZeroScore("yellow yoshi");
+            score = ++boshiScore;
+            dir = -1;
+        }
+        else if (who == "yellow yoshi")
+        {
+            model = yellowYoshiModel;
+            scoreUI = yellowYoshiScoreUI;
+
+            //if this score is coming from zero, they broke the other player's streak
+            if (yellowYoshiScore == 0) ZeroScore("boshi");
+            score = ++yellowYoshiScore;
+        }
+        else Debug.LogError("Typo when calling Score");
+
+        //update score ui
+        scoreUI.gameObject.SetActive(true);
+        scoreUI.text = score.ToString();
+
+        //speed up animation
+        currentAnimLength *= 1/animSpeedupFactor;
+        Sequence currentSequence = DOTween.Sequence();
+        currentSequence.SetLoops(-1);
+        currentSequence.Append(model.DOLocalRotate(new Vector3(0, 360 * dir, 0), currentAnimLength, RotateMode.LocalAxisAdd).SetEase(Ease.Linear));
+        currentSequence.Play();
+
+        switch (score)
+        {
+            case int n when n == 1:
+                
+                break;
+        }
+    }
+
+    private void ZeroScore(string who)
+    {
+        //reset the anim length
+        currentAnimLength = animStartLength;
+
+        if (who == "yellow yoshi")
+        {
+            yellowYoshiScoreUI.gameObject.SetActive(false);
             yellowYoshiScore = 0;
-
-        boshiScore += 1;
-        boshiScoreUI.text = "" + boshiScore;
-    }
-
-    private void ScoreYellowYoshi()
-    {
-        //reset streak
-        if (boshiScore > yellowYoshiScore)
+            DOTween.PauseAll();
+        }
+        else if (who == "boshi")
+        {
+            boshiScoreUI.gameObject.SetActive(false);
             boshiScore = 0;
-
-        yellowYoshiScore += 1;
-        yellowYoshiScoreUI.text = "" + yellowYoshiScore;
+            DOTween.PauseAll();
+        }
     }
+
+    #region Unityhawk Communication
 
     static string IncrementBoshiScore(string arg)
     {
         boshiWins = true;
-        print("boshi is " + arg);
         return "";
     }
 
     static string IncrementYellowYoshiScore(string arg)
     {
         yellowYoshiWins = true;
-        print("yellow yoshi is " + arg);
         return "";
     }
+
+    #endregion
 }

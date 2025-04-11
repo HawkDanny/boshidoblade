@@ -1,0 +1,127 @@
+MainForm()
+Using DirectInput+XInput for host input (keyboard + gamepads)
+joy device: e6439ea0-a10e-11ef-8002-444553540000 `vJoy Device`
+Init method call rpc buffer unityhawk-callmethod-927169033
+Init api call buffer unityhawk-apicall-927169033
+ROM was not a multiple of 1024 bytes, and not a recognized header size: 80. Assume it's purely ROM data.
+Game was not in DB. CRC: DB065489 MD5: 93DF824E6F88FFC7A47FD28EB6C84DE7
+MemoryBlock created for address 36f00000000:36f0d7e7000 with mirror 1badf440000:1baecc27000
+Mouting `shock.wbx` @36f00000000
+  Sections:
+    @0:0     `` 0 bytes
+    @36f000002a8:36f000002eb R   `.interp` 67 bytes
+    @36f000002ec:36f00000304 R   `.note.gnu.build-id` 24 bytes
+    @36f00001000:36f00001003 R X `.init` 3 bytes
+    @36f00001010:36f00240b9f R X `.text` 2358159 bytes
+    @36f00240b9f:36f00240ba2 R X `.fini` 3 bytes
+    @36f00241000:36f002a03d8 R   `.rodata` 390104 bytes
+    @36f002a03d8:36f002a53ac R   `.eh_frame_hdr` 20436 bytes
+    @36f002a53b0:36f002c83a8 R   `.eh_frame` 143352 bytes
+    @36f002c83a8:36f002ca328 R   `.gcc_except_table` 8064 bytes
+    @36f002cb000:36f002cb080 RW  `.init_array` 128 bytes
+    @36f002cb080:36f002cb080 RW  `.fini_array` 0 bytes
+    @36f002cc000:36f002cc080 RW  `.invis` 128 bytes
+    @36f002cd000:36f002cd8f0 RW  `.data` 2288 bytes
+    @36f002cd8f0:36f005e50d8 RW  `.bss` 3241960 bytes
+    @36f005e60d8:36f005e60d8 RW  `.ldata` 0 bytes
+    @0:6f     `.comment` 111 bytes
+    @0:18228     `.symtab` 98856 bytes
+    @0:b4     `.shstrtab` 180 bytes
+    @0:322b7     `.strtab` 205495 bytes
+  Segments:
+    %36f00000040:36f000002a8 R   616 bytes
+    %36f000002a8:36f000002eb R   67 bytes
+    %36f00000000:36f00000304 R   772 bytes
+    %36f00001000:36f00240ba2 R X 2358178 bytes
+    %36f00241000:36f002ca328 R   561960 bytes
+    %36f002cb000:36f002cb080 RW  128 bytes
+    %36f002cc000:36f005e60d8 RW  3252440 bytes
+    %36f002cb000:36f002cc000 R   4096 bytes
+    %36f002a03d8:36f002a53ac R   20436 bytes
+    %36f000002ec:36f00000304 R   24 bytes
+Calling _start()
+Initializing heap sbrk at 36f007e7000:36f017e7000
+Allocated 4096 bytes on sbrk heap, usage 4096/16777216
+Allocated 4096 bytes on sbrk heap, usage 8192/16777216
+Allocated 4096 bytes on sbrk heap, usage 12288/16777216
+Allocated 4096 bytes on sbrk heap, usage 16384/16777216
+Allocated 4096 bytes on sbrk heap, usage 20480/16777216
+Allocated 4096 bytes on sbrk heap, usage 24576/16777216
+Allocated 4096 bytes on sbrk heap, usage 28672/16777216
+Allocated 4096 bytes on sbrk heap, usage 32768/16777216
+Allocated 4096 bytes on sbrk heap, usage 36864/16777216
+Allocated 4096 bytes on sbrk heap, usage 40960/16777216
+Allocated 4096 bytes on sbrk heap, usage 45056/16777216
+Allocated 4096 bytes on sbrk heap, usage 49152/16777216
+Allocated 4096 bytes on sbrk heap, usage 53248/16777216
+Allocated 4096 bytes on sbrk heap, usage 57344/16777216
+Allocated 4096 bytes on sbrk heap, usage 61440/16777216
+Allocated 4096 bytes on sbrk heap, usage 65536/16777216
+Allocated 4096 bytes on sbrk heap, usage 69632/16777216
+Allocated 4096 bytes on sbrk heap, usage 73728/16777216
+Allocated 4096 bytes on sbrk heap, usage 77824/16777216
+Allocated 4096 bytes on sbrk heap, usage 81920/16777216
+Allocated 4096 bytes on sbrk heap, usage 86016/16777216
+Allocated 4096 bytes on sbrk heap, usage 90112/16777216
+Allocated 4096 bytes on sbrk heap, usage 94208/16777216
+Allocated 4096 bytes on sbrk heap, usage 98304/16777216
+Allocated 4096 bytes on sbrk heap, usage 102400/16777216
+Allocated 4096 bytes on sbrk heap, usage 106496/16777216
+Allocated 4096 bytes on sbrk heap, usage 110592/16777216
+Allocated 4096 bytes on sbrk heap, usage 114688/16777216
+Allocated 4096 bytes on sbrk heap, usage 118784/16777216
+Allocated 4096 bytes on sbrk heap, usage 122880/16777216
+Allocated 4096 bytes on sbrk heap, usage 126976/16777216
+Allocated 4096 bytes on sbrk heap, usage 131072/16777216
+Allocated 4096 bytes on sbrk heap, usage 135168/16777216
+Allocated 4096 bytes on sbrk heap, usage 139264/16777216
+Allocated 4096 bytes on sbrk heap, usage 143360/16777216
+Allocated 4096 bytes on sbrk heap, usage 147456/16777216
+Allocated 4096 bytes on sbrk heap, usage 151552/16777216
+Allocated 4096 bytes on sbrk heap, usage 155648/16777216
+Allocated 4096 bytes on sbrk heap, usage 159744/16777216
+Allocated 4096 bytes on sbrk heap, usage 163840/16777216
+Allocated 4096 bytes on sbrk heap, usage 167936/16777216
+Allocated 4096 bytes on sbrk heap, usage 172032/16777216
+Allocated 4096 bytes on sbrk heap, usage 176128/16777216
+Allocated 4096 bytes on sbrk heap, usage 180224/16777216
+Allocated 4096 bytes on sbrk heap, usage 184320/16777216
+Allocated 4096 bytes on sbrk heap, usage 188416/16777216
+Allocated 4096 bytes on sbrk heap, usage 192512/16777216
+Allocated 4096 bytes on sbrk heap, usage 196608/16777216
+Allocated 4096 bytes on sbrk heap, usage 200704/16777216
+Allocated 4096 bytes on sbrk heap, usage 204800/16777216
+Allocated 4096 bytes on sbrk heap, usage 208896/16777216
+Allocated 4096 bytes on sbrk heap, usage 212992/16777216
+Allocated 4096 bytes on sbrk heap, usage 217088/16777216
+Allocated 4096 bytes on sbrk heap, usage 221184/16777216
+Allocated 4096 bytes on sbrk heap, usage 225280/16777216
+Allocated 8192 bytes on sbrk heap, usage 233472/16777216
+Allocated 8192 bytes on sbrk heap, usage 241664/16777216
+Allocated 20480 bytes on sbrk heap, usage 262144/16777216
+Allocated 28672 bytes on sbrk heap, usage 290816/16777216
+Allocated 40960 bytes on sbrk heap, usage 331776/16777216
+Allocated 61440 bytes on sbrk heap, usage 393216/16777216
+Allocated 90112 bytes on sbrk heap, usage 483328/16777216
+Emulated Disc SCEx IDs:
+	Disc 1: SCEA
+Region: North America
+Allocated 135168 bytes on sbrk heap, usage 618496/16777216
+Allocated 135168 bytes on sbrk heap, usage 753664/16777216
+Allocated 135168 bytes on sbrk heap, usage 888832/16777216
+Allocated 135168 bytes on sbrk heap, usage 1024000/16777216
+Allocated 135168 bytes on sbrk heap, usage 1159168/16777216
+Multitap on PSX Port 1: Disabled
+Multitap on PSX Port 2: Disabled
+Initializing heap invisible at 0x36f047e7000:0x36f077e7000
+Allocated 1474560 bytes on invisible heap, usage 1474560/50331648
+Allocated 88200 bytes on invisible heap, usage 1562768/50331648
+Calling ecl_seal()
+WaterboxHost Sealed!
+Init texture buffer unityhawk-texture-927169033-0
+Active Firmwares:
+  PSX+U : 0555C6FAE8906F3F09BAF5988F00E55F88E9F30B
+Read a zipstate of version 1.0.2
+Elapsed time for Load Core: 35 ms
+Elapsed time for Blit: 1 ms
+Elapsed time for Load Framebuffer: 3 ms
